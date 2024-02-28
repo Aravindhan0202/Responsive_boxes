@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    />
+    <script>
+      let previousContainer = null;
+      let mostPopularTag = document.createElement("span");
+      mostPopularTag.innerHTML = `<div class="frame-child7"></div>
+            <span class="most-popular">MOST POPULAR</span>`;
+      mostPopularTag.className = "frame-button";
+      function fun(event) {
+        if(previousContainer != null) {
+          let previousContainerDiv = document.getElementById(previousContainer);
+          previousContainerDiv.className = "container container-border";
+
+          previousContainerDiv.childNodes[3].className = "size-frame-parent hidden-visibility";
+        }
+
+        // get current selected element
+        let currentContainer = event.target.value
+        let currentElementDiv = document.getElementById(currentContainer);
+
+        //add style to current element
+        currentElementDiv.className = "container selected-container";
+        
+        //add tag to current element
+        currentElementDiv.appendChild(mostPopularTag)
+
+        console.log(currentElementDiv.childNodes[3].className);
+
+        //add size elements to current container
+        currentElementDiv.childNodes[3].className = "size-frame-parent"
+        // currentElementDiv.getElementById("sizeForm").className = "size-frame-parent"
+
+        
+        previousContainer = currentContainer;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="sunshine-bliss">
+      <div class="top-frame">
+        <h2 class="yay-its-bogo hr-lines">YAY! It’s BOGO</h2>
+      </div>
+
+      <div class="container container-border" id="container1">
+        <div class="rectangle-parent">
+          <div class="frame-parent">
+            <div class="frame-wrapper">
+              <div class="ellipse-parent">
+                <input type="radio" name="unitcount" value="container1" oninput="fun(event)"/>
+              </div>
+            </div>
+            <div class="frame-group">
+              <div class="unit-parent">
+                <div class="unit">1 Unit</div>
+                <div class="rectangle-group">
+                  <div class="rectangle-div"></div>
+                  <div class="off">10% Off</div>
+                </div>
+              </div>
+              <div class="standard-price">Standard Price</div>
+            </div>
+          </div>
+          <div class="coloured-frames">
+            <div class="usd">$10.00 USD</div>
+            <div class="usd1">$24.00 USD</div>
+          </div>
+        </div>
+        <div class="size-frame-parent  hidden-visibility" id="sizeForm">
+          <div class="size-frame">
+            <div class="frame-squared">
+              <div class="size">Size</div>
+              <div class="colour">Colour</div>
+            </div>
+          </div>
+          <div class="frameset">
+            <div class="frameset-inner">
+              <div class="parent">
+                <div class="div">#1</div>
+                <div class="div1">#2</div>
+              </div>
+            </div>
+            <div class="black-frame">
+              <div class="s-frame-with-polygon">
+                <div class="s-frame-with-polygon-child"></div>
+                <div class="s">S</div>
+                <div class="s-frame-with-polygon-inner">
+                  <img
+                    class="polygon-icon"
+                    alt=""
+                    src="./public/polygon-31.svg"
+                  />
+                </div>
+              </div>
+              <div class="s-frame-with-polygon1">
+                <div class="s-frame-with-polygon-item"></div>
+                <div class="s1">S</div>
+                <div class="frame-div">
+                  <img
+                    class="frame-child2"
+                    alt=""
+                    src="./public/polygon-33.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="black-frame1">
+              <div class="rectangle-parent1">
+                <div class="frame-child3"></div>
+                <div class="black">Black</div>
+                <div class="polygon-wrapper">
+                  <img
+                    class="frame-child4"
+                    alt=""
+                    src="./public/polygon-32.svg"
+                  />
+                </div>
+              </div>
+              <div class="rectangle-parent2">
+                <div class="frame-child5"></div>
+                <div class="colour1">Colour</div>
+                <div class="polygon-container">
+                  <img
+                    class="frame-child6"
+                    loading="lazy"
+                    alt=""
+                    src="./public/polygon-34.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container container-border" id="container2">
+        <div class="rectangle-parent">
+          <div class="frame-parent"> 
+            <div class="frame-wrapper">
+              <div class="ellipse-parent">
+                <input type="radio" name="unitcount" value="container2" oninput="fun(event)"/>
+              </div>
+            </div>
+            <div class="unit2">2 Unit</div>
+            <div class="second-off-frame">
+              <div class="off-toggle">
+                <div class="off-toggle-child"></div>
+                <div class="off2">20% Off</div>
+              </div>
+            </div>
+          </div>
+          <div class="most-popular-group">
+            <div class="price-displays">
+              <div class="usd4">$18.00 USD</div>
+              <div class="usd5">$24.00 USD</div>
+            </div>
+          </div>
+        </div>
+        <div class="size-frame-parent  hidden-visibility" id="sizeForm">
+          <div class="size-frame">
+            <div class="frame-squared">
+              <div class="size">Size</div>
+              <div class="colour">Colour</div>
+            </div>
+          </div>
+          <div class="frameset">
+            <div class="frameset-inner">
+              <div class="parent">
+                <div class="div">#1</div>
+                <div class="div1">#2</div>
+              </div>
+            </div>
+            <div class="black-frame">
+              <div class="s-frame-with-polygon">
+                <div class="s-frame-with-polygon-child"></div>
+                <div class="s">S</div>
+                <div class="s-frame-with-polygon-inner">
+                  <img
+                    class="polygon-icon"
+                    alt=""
+                    src="./public/polygon-31.svg"
+                  />
+                </div>
+              </div>
+              <div class="s-frame-with-polygon1">
+                <div class="s-frame-with-polygon-item"></div>
+                <div class="s1">S</div>
+                <div class="frame-div">
+                  <img
+                    class="frame-child2"
+                    alt=""
+                    src="./public/polygon-33.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="black-frame1">
+              <div class="rectangle-parent1">
+                <div class="frame-child3"></div>
+                <div class="black">Black</div>
+                <div class="polygon-wrapper">
+                  <img
+                    class="frame-child4"
+                    alt=""
+                    src="./public/polygon-32.svg"
+                  />
+                </div>
+              </div>
+              <div class="rectangle-parent2">
+                <div class="frame-child5"></div>
+                <div class="colour1">Colour</div>
+                <div class="polygon-container">
+                  <img
+                    class="frame-child6"
+                    loading="lazy"
+                    alt=""
+                    src="./public/polygon-34.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container container-border" id="container3">
+        <div class="rectangle-parent">
+          <div class="frame-parent"> 
+            <div class="frame-wrapper">
+              <div class="ellipse-parent">
+                <input type="radio" name="unitcount" value="container3" oninput="fun(event)"/>
+              </div>
+            </div>
+            <div class="unit2">3 Unit</div>
+            <div class="second-off-frame">
+              <div class="off-toggle">
+                <div class="off-toggle-child"></div>
+                <div class="off2">30% Off</div>
+              </div>
+            </div>
+          </div>
+          <div class="most-popular-group">
+            <div class="price-displays">
+              <div class="usd4">$24.00 USD</div>
+              <div class="usd5">$24.00 USD</div>
+            </div>
+          </div>
+        </div>
+        <div class="size-frame-parent hidden-visibility" id="sizeForm">
+          <div class="size-frame">
+            <div class="frame-squared">
+              <div class="size">Size</div>
+              <div class="colour">Colour</div>
+            </div>
+          </div>
+          <div class="frameset">
+            <div class="frameset-inner">
+              <div class="parent">
+                <div class="div">#1</div>
+                <div class="div1">#2</div>
+              </div>
+            </div>
+            <div class="black-frame">
+              <div class="s-frame-with-polygon">
+                <div class="s-frame-with-polygon-child"></div>
+                <div class="s">S</div>
+                <div class="s-frame-with-polygon-inner">
+                  <img
+                    class="polygon-icon"
+                    alt=""
+                    src="./public/polygon-31.svg"
+                  />
+                </div>
+              </div>
+              <div class="s-frame-with-polygon1">
+                <div class="s-frame-with-polygon-item"></div>
+                <div class="s1">S</div>
+                <div class="frame-div">
+                  <img
+                    class="frame-child2"
+                    alt=""
+                    src="./public/polygon-33.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="black-frame1">
+              <div class="rectangle-parent1">
+                <div class="frame-child3"></div>
+                <div class="black">Black</div>
+                <div class="polygon-wrapper">
+                  <img
+                    class="frame-child4"
+                    alt=""
+                    src="./public/polygon-32.svg"
+                  />
+                </div>
+              </div>
+              <div class="rectangle-parent2">
+                <div class="frame-child5"></div>
+                <div class="colour1">Colour</div>
+                <div class="polygon-container">
+                  <img
+                    class="frame-child6"
+                    loading="lazy"
+                    alt=""
+                    src="./public/polygon-34.svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="total-prices">
+        <div class="free-delivery">Free Delivery</div>
+        <div class="total-1800-container">
+          <span>Total : $18</span>
+          <span class="usd6">.00 USD</span>
+        </div>
+      </div>
+      <div class="website-logo">
+        <button class="cart-icon">
+          <img class="plus-icon" alt="" src="./public/plus.svg" />
+
+          <div class="add-to-cart">Add to Cart</div>
+        </button>
+        <i class="powered-by-pumper">@ Powered by Pumper</i>
+      </div>
+    </div>
+  </body>
+</html>
